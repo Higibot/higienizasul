@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HigienizaSUL</title>
+
+  <!-- Cor da barra de status (Android) -->
+  <meta name="theme-color" content="#0077ff"/>
+
+  <!-- Ícone para iOS -->
+  <link rel="apple-touch-icon" href="icone192.png">
+
+  <!-- Manifesto PWA (vamos criar depois) -->
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+  <header>
+    <h1>HigienizaSUL</h1>
+    <p>Conectamos quem precisa de higienização a quem entende do assunto.</p>
+  </header>
+
+  <main>
+    <h2>Como funciona?</h2>
+    <ol>
+      <li>Escolha o serviço.</li>
+      <li>Agende pelo WhatsApp.</li>
+      <li>Receba em casa ou empresa.</li>
+    </ol>
+  </main>
+
+  <!-- Rodapé com instruções -->
+  <footer>
+    <hr>
+    <p><strong>Adicione nosso app à sua tela inicial:</strong></p>
+
+    <!-- ANDROID -->
+    <p class="android">
+      📱 <strong>Android:</strong> toque em ⋮ (três pontinhos) →
+      <em>"Adicionar à tela inicial"</em> → <strong>Adicionar</strong>.
+    </p>
+
+    <!-- iOS -->
+    <p class="ios">
+      🍏 <strong>iPhone / iPad:</strong> toque em
+      <span style="font-size:20px">⤴️</span> (compartilhar) →
+      <em>"Adicionar à Tela de Início"</em> → <strong>Adicionar</strong>.
+    </p>
+  </footer>
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0 16px 40px; }
+    header { background: #0077ff; color: #fff; padding: 24px 16px; text-align: center; }
+    footer { margin-top: 40px; font-size: 14px; line-height: 1.6; }
+    hr { border: none; border-top: 1px solid #ccc; margin: 24px 0; }
+  </style>
+
+  <!-- Registra o Service-Worker (PWA) -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js");
+    }
+  </script>
+</body>
+</html>
